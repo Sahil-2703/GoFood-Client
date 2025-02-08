@@ -16,7 +16,7 @@ const Cart = () => {
   const handleCheckOut = async () => {
     let userEmail = localStorage.getItem("userEmail");
     // console.log(data,localStorage.getItem("userEmail"),new Date())
-    let response = await fetch("https://gofood-server-1.onrender.com/api/orderData", {
+    let response = await fetch("https://gofood-server-1.onrender.com", {
       // credentials: 'include',
       // Origin:"http://localhost:3000/login",
       method: "POST",

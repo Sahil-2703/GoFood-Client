@@ -14,7 +14,7 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("https://gofood-server-1.onrender.com/api/login", {
+    const response = await fetch("https://gofood-server-1.onrender.com", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
