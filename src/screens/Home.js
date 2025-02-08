@@ -8,7 +8,7 @@ const Home = () => {
   const [foodItem, setFooodItem] = useState([]);
 
   const loadData = async () => {
-    let response = await fetch("https://gofood-server-1.onrender.com", {
+    let response = await fetch("https://gofood-server-1.onrender.com/api/foodData", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
