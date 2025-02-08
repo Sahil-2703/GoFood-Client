@@ -8,7 +8,7 @@ const Home = () => {
   const [foodItem, setFooodItem] = useState([]);
 
   const loadData = async () => {
-    let response = await fetch("http://localhost:5000/api/foodData", {
+    let response = await fetch("https://gofood-server-1.onrender.com/api/foodData", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -103,7 +103,7 @@ const Home = () => {
       {/* main body part */}
 
       <div className="container">
-        {foodCat !== []
+        {foodCat != []
           ? foodCat.map((data) => {
               return (
                 <div className="row mb-3">
@@ -111,7 +111,7 @@ const Home = () => {
                     {data.CategoryName}
                   </div>
                   <hr />
-                  {foodItem !== []
+                  {foodItem != []
                     ? foodItem
                         .filter(
                           (item) => (item.CategoryName === data.CategoryName) &&
